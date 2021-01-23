@@ -8,5 +8,4 @@ urlpatterns = [
     path('save/', views.save_file),
     path('table/', views.Table),
 
-
 ]

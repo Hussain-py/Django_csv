@@ -6,6 +6,7 @@ from django.shortcuts import render
 from .forms import InputForm
 import requests
 from bs4 import BeautifulSoup
+from django.contrib import messages
 import pandas as pd
 import json
 import csv
@@ -48,6 +49,7 @@ def home_view(request):
         # MyLoginForm = Loginform()
         redirect('/forms')
     # Table(result)
+
     return render(request, "forms.html", context)
 
 
@@ -69,6 +71,5 @@ def Table(request):
     data = json.loads(json_records)
     context = {'d': data}
     return render(request, 'table.html', context)
-
 
 
