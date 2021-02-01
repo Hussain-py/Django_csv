@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>display data</title>
+</head>
+    <body>
+
+    <table class="table">
+	<thead>
+	<tr>
+        <th>Number</th>
+		<th>Email</th>
+		<th>Url</th>
+	</tr>
+	</thead>
+	<tbody>
+	{% for i in info %}
+	<tr>
+        <td>{{i.Number}}</td>
+		<td>{{i.Email}}</td>
+		<td>{{i.Url}}</td>
+	</tr>
+	{% endfor %}
+
+    </body>
+</html>

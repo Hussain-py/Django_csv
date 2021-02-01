@@ -15,10 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+from django.views.static import serve
+from django.views.static import serve
+from django_csv import settings
 from csv_app import urls as csv_app_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(csv_app_urls))
+    path('', include(csv_app_urls)),
+    path('static/<path:path>/', serve, {'document_root': settings.STATIC_ROOT, }),
+    path('media/<path:path>/', serve, {'document_root': settings.MEDIA_ROOT, })
+
 ]

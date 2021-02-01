@@ -27,7 +27,14 @@
         <form class="center" action = "" method = "post">
 	        {% csrf_token %}
             <label for="search">Search Term:</label>
-	        {{form.search_term}}&nbsp;&nbsp;<input class="btn btn-success" type="submit" value=Submit>
+	        {{form.search_term}}
+            <label for="search">Area:</label>
+	        {{form.area}}
+            <label for="search">Radius:</label>
+	        {{form.radius}}
+            <label for="search">Buisness Type:</label>
+	        {{form.typ}}
+            &nbsp;<input class="btn btn-info" type="submit" value=Submit>
         </form><br>
 
 
@@ -35,11 +42,6 @@
 {#        <a class="btn btn-primary" href="/save">DownLoad File</a>#}
     </div>
 </div>
-
-
-    {% block content %}
-
-    {% endblock %}
 </div>
 
 </body>

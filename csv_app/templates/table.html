@@ -11,25 +11,30 @@
     <style>
         div{
             padding-top: 1%;
+            {#padding-left: 1%;#}
+            {#padding-right: 1%;#}
         }
     </style>
 </head>
 <body>
 
 <div class="container-fluid">
-<h2 class="text-center"><u>Available Links</u>&nbsp;<a class="btn btn-primary" href="/">Search</a>&nbsp;<a class="btn btn-primary" href="/save">DownLoad File</a></h2><br>
+<h2 class="text-center"><u>Available Links</u></h2><br>
+    <h2 class="text-center"><a class="btn btn-primary" href="/">Search</a>&nbsp;<a class="btn btn-primary" href="/save">DownLoad File</a></h2><br>
 <table class="table">
 	<thead>
 	<tr>
-        <th>S.no</th>
+        <th>Number</th>
+		<th>Email</th>
 		<th>Url</th>
 	</tr>
 	</thead>
 	<tbody>
-	<!-- jinja2 Technique -->
 	{% if d %}
 	{% for i in d %}
-	<tr><td></td>
+	<tr>
+        <td>{{i.Number}}</td>
+		<td>{{i.Email}}</td>
 		<td>{{i.Url}}</td>
 	</tr>
 	{% endfor %}
